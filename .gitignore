@@ -2,9 +2,10 @@
 __pycache__/
 *.py[cod]
 .idea/
-requirements.txt
 staticfiles
-Procfile
+
+# Compiled files
+*.pyc
 
 #temp files
 .*~
