@@ -2,6 +2,12 @@
 __pycache__/
 *.py[cod]
 .idea/
+requirements.txt
+staticfiles
+Procfile
+
+#temp files
+.*~
 
 # C extensions
 *.so

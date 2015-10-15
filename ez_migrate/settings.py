@@ -25,13 +25,12 @@ SECRET_KEY = '!#4x_%)2g+l0#9k1a0a=%gnpj5hbfpqt%s(0639zlxtvj)&m0f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -58,7 +57,7 @@ ROOT_URLCONF = 'web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,8 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ez_migrate.wsgi.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
@@ -87,7 +84,6 @@ DATABASES = {
         'PORT': '5432',
         }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -105,9 +101,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
-
+# Static asset configuration
 STATIC_URL = '/static/'
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
-)
+STATIC_ROOT = 'staticfiles'
