@@ -107,5 +107,9 @@ STATIC_ROOT = 'staticfiles'
 
 CORS_ORIGIN_WHITELIST = (
     'google.com',
-    'fiddle.jshell.net'
+    'fiddle.jshell.net',
+)
+
+CORS_ORIGIN_REGEX_WHITELIST = (
+    '^(https?:\/\/)?(.*\.)?googleusercontent\.com',
 )
